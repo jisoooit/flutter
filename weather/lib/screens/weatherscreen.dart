@@ -6,6 +6,8 @@ import 'package:timer_builder/timer_builder.dart';
 import 'package:intl/intl.dart';
 import 'package:weather/model/model.dart';
 
+
+
 class WeatherScreen extends StatefulWidget {
   WeatherScreen({this.parseWeatherData,this.parseAirData});
   final dynamic parseWeatherData;
@@ -15,14 +17,14 @@ class WeatherScreen extends StatefulWidget {
 }
 
 class _WeatherScreenState extends State<WeatherScreen> {
-  String city = "";
-  int temp = 0;
+  String? city;
+  int? temp;
   Widget? icon;
-  String des="";
+  String? des;
   Widget? airIcon;
   Widget? airState;
-  double dust1=0;
-  double dust2=0;
+  double? dust1;
+  double? dust2;
   Model model=Model();
   var date=DateTime.now();
 
@@ -37,10 +39,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
     int condition=weatherData['weather'][0]['id'];
     des=weatherData['weather'][0]['description'];
     int index=airData['list'][0]['main']['aqi']; 
-    dust1=airData['list'][0]['components']['pm10'];
-    dust2=airData['list'][0]['components']['pm2_5'];
+    dust1=airData['list'][0]['components']['pm10'].toDouble();
+    dust2=airData['list'][0]['components']['pm2_5'].toDouble();
 
-    double temp2 = weatherData['main']['temp'];
+    double temp2 = weatherData['main']['temp'].toDouble();
     temp = temp2.toInt(); //round() 반올림 해도 됨 ㅋ
     city = weatherData['name'];
     icon=model.getWeatherIcon(condition);
