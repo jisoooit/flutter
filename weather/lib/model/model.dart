@@ -35,7 +35,7 @@ class Model{
         height: 35.0,
       );
     }else if(index==2){
-      return Image.asset('image/fiar.png',
+      return Image.asset('image/fair.png',
         width: 37.0,
         height: 35.0,
       );

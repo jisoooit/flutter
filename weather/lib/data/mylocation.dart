@@ -10,7 +10,6 @@ class Mylocation{
       getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
       latitude2=position.latitude;
       longitude2=position.longitude;
-      print(position);
       print(latitude2);
       print(longitude2);
     }catch(e){
