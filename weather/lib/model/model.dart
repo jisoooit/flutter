@@ -5,21 +5,21 @@ import 'package:flutter/cupertino.dart';
 class Model{
   Widget? getWeatherIcon(int condition){ //수치에 맞는 svg파일을 불러오기때문에 widget
     if(condition<300){
-      return SvgPicture.asset('svg/climacon-colud_lightning.scg',
+      return SvgPicture.asset('svg/climacon-cloud_lightning.svg',
         color: Colors.black87,
       );
     }else if(condition<600){
-      return SvgPicture.asset('svg/climacon-Cloud_snow_alt.scg',
+      return SvgPicture.asset('svg/climacon-cloud_snow_alt.svg',
         color: Colors.black87,
       );
     }
     else if(condition==800){
-      return SvgPicture.asset('svg/climacon-sun.scg',
+      return SvgPicture.asset('svg/climacon-sun.svg',
         color: Colors.black87,
       );
     }
     else if(condition<=804){
-      return SvgPicture.asset('svg/climacon-Cloud_sun.scg',
+      return SvgPicture.asset('svg/climacon-cloud_sun.svg',
         color: Colors.black87,
       );
     }
@@ -105,5 +105,53 @@ class Model{
     //   );
     // }
   }
+  Widget? getmask(int index){
+    if (index==1){
+        return Text("마스크 안써도 됨",
+        style: TextStyle(
+          color: Colors.blueAccent,
+          fontSize: 16.0,
+          fontWeight: FontWeight.bold,
+          ),
+        );
+    }else if(index==2){
+      return Text("마스크 안써도 됨",
+        style: TextStyle(
+          color: Colors.blueAccent,
+          fontSize: 16.0,
+          fontWeight: FontWeight.bold,
+          ),
+        );
+    }else if(index==3){
+      return Text("마스크 자유",
+        style: TextStyle(
+          color: Colors.blueAccent,
+          fontSize: 16.0,
+          fontWeight: FontWeight.bold,
+          ),
+        );
+    }else if(index==4){
+      return Text("마스크 착용",
+        style: TextStyle(
+          color: Colors.blueAccent,
+          fontSize: 16.0,
+          fontWeight: FontWeight.bold,
+          ),
+        );
+    }else if(index==5){
+      return Text("마스크 필수",
+        style: TextStyle(
+          color: Colors.blueAccent,
+          fontSize: 16.0,
+          fontWeight: FontWeight.bold,
+          ),
+        );
+    }
+   
+  }
 }
+
+
+
+
 
