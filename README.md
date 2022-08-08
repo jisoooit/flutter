@@ -5,9 +5,14 @@
 
 <br>
 
-## weather폴더
+## 폴더별 설명
 
+### weather
 현재 위치의 날씨, 미세먼지농도를 알 수 있고 현재 기온에 맞는 복장을 추천해줍니다.
+<br>
+
+### mydice
+주사위 게임입니다.
 <br>
 
 ### 사용기술
@@ -16,4 +21,4 @@
 <br>
 
 ### 화면
-![image](https://user-images.githubusercontent.com/77223718/183360173-28228872-1033-484b-b832-624a61f162d3.png)
+![image](https://user-images.githubusercontent.com/77223718/183363949-dd69389f-eff2-4457-8017-623ab2131b77.png)
